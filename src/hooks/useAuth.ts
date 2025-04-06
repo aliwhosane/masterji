@@ -1,5 +1,6 @@
-import { useSelector } from 'react-redux';
-import { RootState } from '../store';
+// Remove unused imports
+// import { useSelector } from 'react-redux';
+// import { RootState } from '../store';
 
 export const useAuth = () => {
   // This will be expanded when we add auth state to Redux

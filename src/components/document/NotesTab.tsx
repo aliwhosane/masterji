@@ -26,8 +26,9 @@ const NotesTab: React.FC<NotesTabProps> = ({ documentId }) => {
     status: notesStatus, 
     error: notesError,
     addStatus,
-    editStatus,
-    deleteStatus
+    // Remove unused variables
+    // const editStatus = ...;
+    // const deleteStatus = ...;
   } = useAppSelector((state) => state.notes);
 
   useEffect(() => {

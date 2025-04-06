@@ -99,7 +99,7 @@ const ChatAssistant: React.FC<ChatAssistantProps> = ({ documentId, onSendMessage
           {messages.map((message, index) => (
             <div 
               key={index} 
-              className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+              className={`flex text-black ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div 
                 className={`max-w-[85%] md:max-w-[80%] p-2 md:p-3 rounded-lg ${
@@ -152,7 +152,7 @@ const ChatAssistant: React.FC<ChatAssistantProps> = ({ documentId, onSendMessage
             value={inputValue}
             onChange={handleInputChange}
             placeholder="Ask a question about this document..."
-            className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 text-black border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={isLoading}
           />
           <button
