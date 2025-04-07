@@ -3,6 +3,7 @@ import authReducer from './slices/authSlice';
 import documentReducer from './slices/documentSlice';
 import noteReducer from './slices/noteSlice';
 import chatReducer from './slices/chatSlice';
+import quizReducer from './slices/quizSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     documents: documentReducer,
     notes: noteReducer,
     chat: chatReducer,
+    quiz: quizReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

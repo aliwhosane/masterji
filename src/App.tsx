@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import ProtectedRoute from './components/ProtectedRoute';
 import MainLayout from './layouts/MainLayout';
 import { Toaster } from 'react-hot-toast';
+import QuizPage from './pages/QuizPage';
 
 // Lazy load pages for better performance
 const LoginPage = lazy(() => import('./pages/LoginPage'));
@@ -57,7 +58,7 @@ function App() {
             <Route element={<MainLayout />}>
               <Route path="/" element={<DashboardPage />} />
               <Route path="/documents/:id" element={<DocumentDetailPage />} />
-              {/* <Route path="/upload" element={<UploadPage />} /> */}
+              <Route path="/quiz/:documentId" element={<QuizPage />} />
             </Route>
           </Route>
           
@@ -69,4 +70,5 @@ function App() {
     </>
   );
 }
+
 export default App;

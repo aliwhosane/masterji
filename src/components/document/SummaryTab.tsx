@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import LoadingSpinner from '../common/LoadingSpinner';
 
 interface SummaryTabProps {
@@ -45,8 +46,8 @@ const SummaryTab: React.FC<SummaryTabProps> = ({
               Regenerate
             </button>
           </div>
-          <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm">
-            <p className="whitespace-pre-line text-gray-700 leading-relaxed">{summary}</p>
+          <div className="text-black bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm">
+            <ReactMarkdown>{summary}</ReactMarkdown>
           </div>
         </div>
       ) : (

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import LoadingSpinner from './common/LoadingSpinner';
+import ReactMarkdown from 'react-markdown';
 
 interface Message {
   sender: 'user' | 'ai';
@@ -108,7 +109,7 @@ const ChatAssistant: React.FC<ChatAssistantProps> = ({ documentId, onSendMessage
                     : 'bg-white border border-gray-200 rounded-bl-none'
                 }`}
               >
-                <div className="text-xs md:text-sm">{message.text}</div>
+                <div className="text-xs md:text-sm"><ReactMarkdown>{message.text}</ReactMarkdown></div>
                 <div 
                   className={`text-xs mt-1 text-right ${
                     message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'

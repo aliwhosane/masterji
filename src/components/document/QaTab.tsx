@@ -42,7 +42,7 @@ const QaTab: React.FC<QaTabProps> = ({
           </div>
           {questions.map((qa, index) => (
             <div key={index} className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-medium text-lg mb-2">Q: {qa.question}</h3>
+              <h3 className="text-black font-medium text-lg mb-2">Q: {qa.question}</h3>
               <p className="text-gray-700">A: {qa.answer}</p>
             </div>
           ))}
